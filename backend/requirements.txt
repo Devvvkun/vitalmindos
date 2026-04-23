@@ -1,8 +1,6 @@
-fastapi
-uvicorn
-pydantic
-pydantic-settings
+flask
+flask-cors
 numpy
 joblib
-slowapi
 scikit-learn
+gunicorn
