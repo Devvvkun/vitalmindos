@@ -14,7 +14,7 @@ from sklearn.metrics import classification_report, accuracy_score
 # ─── PATHS ──────────────────────────────────────────────────────────────────
 BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR   = os.path.join(BASE_DIR, "..")
-DB_PATH    = r"C:\Users\Ujjwal\OneDrive\Desktop\asd\database\database\health.db"
+DB_PATH    = r"health.db"
 MODEL_DIR  = os.path.abspath(os.path.join(ROOT_DIR, "frontend", "dist", "models"))
 MODEL_PATH = os.path.join(MODEL_DIR, "stress_model.pkl")
 SCALER_PATH = os.path.join(MODEL_DIR, "scaler.pkl")
