@@ -36,6 +36,9 @@ DB_PATH = r"health.db"
 app = Flask(__name__)
 CORS(app)  # Allow requests from Vite dev server (localhost:5173)
 
+@app.route("/", methods=["GET"])
+def root():
+    return jsonify({"status": "running"})
 
 # ─── HEALTH CHECK ────────────────────────────────────────────────────────────
 @app.route("/health", methods=["GET"])
