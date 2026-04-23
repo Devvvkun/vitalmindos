@@ -10,7 +10,27 @@ from flask_cors import CORS
 import sqlite3
 from predict import predict_stress
 from ml_model import train_model
+def init_db():
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS daily_logs (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER,
+            heart_rate REAL,
+            systolic_bp REAL,
+            diastolic_bp REAL,
+            spo2 REAL,
+            temperature REAL,
+            sleep_hours REAL,
+            workout_hours REAL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+    conn.commit()
+    conn.close()
 
+init_db()
 DB_PATH = r"health.db"
 
 app = Flask(__name__)
