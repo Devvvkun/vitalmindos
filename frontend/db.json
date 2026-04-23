@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "email": "ujjwal@gamil.com",
+      "password": "123456789@",
+      "name": "ujjwal singh",
+      "streak": 1,
+      "lastLoginDate": "2026-04-23T07:37:58.194Z",
+      "id": "p_81FeM_Ogo"
+    },
+    {
+      "email": "ujjwal2@gamil.com",
+      "password": "123456789@",
+      "name": "ujjwal singh",
+      "streak": 1,
+      "lastLoginDate": "2026-04-23T07:07:41.819Z",
+      "id": "IugnEQsQSoM"
+    },
+    {
+      "email": "iii@gamil.com",
+      "password": "24445588@",
+      "name": "iii",
+      "streak": 1,
+      "lastLoginDate": "2026-04-23T10:18:05.413Z",
+      "id": "hF32hFw-2zA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

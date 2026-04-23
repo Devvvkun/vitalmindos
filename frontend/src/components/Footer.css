@@ -1,0 +1,32 @@
+.main-footer {
+  margin-top: auto;
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+}
+
+.footer-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-primary);
+}
+
+.footer-bottom {
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.875rem;
+}

@@ -1,0 +1,189 @@
+/* Analytics Page Specific Styles - Light Theme Update */
+.analytics-wrapper {
+  background-color: #ffffff;
+  min-height: calc(100vh - 80px); /* Adjust based on header height */
+  color: #1e293b;
+  padding-bottom: 3rem;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.analytics-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Neon Utility Classes */
+.text-neon-orange {
+  color: #ff4b2b;
+  text-shadow: 0 0 10px rgba(255, 75, 43, 0.5);
+}
+
+.text-neon-cyan {
+  color: #00d2ff;
+  text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+}
+
+.text-neon-lime {
+  color: #39ff14;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+.text-off-white {
+  color: #334155;
+}
+
+/* Glassmorphism Panel - Light */
+.glass-panel-dark {
+  background: rgba(0, 0, 0, 0.02) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Section 1: Header / Upload */
+.analytics-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.compact-upload-btn {
+  background: rgba(0, 210, 255, 0.1);
+  border: 1px solid #00d2ff;
+  color: #00d2ff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+.compact-upload-btn:hover {
+  background: rgba(0, 210, 255, 0.2);
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+}
+
+.file-name-text {
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 1rem;
+  font-style: italic;
+}
+
+/* Empty State Upload Area */
+.empty-upload-area {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin-top: 2rem;
+  background: rgba(0, 0, 0, 0.01);
+  transition: border-color 0.3s ease;
+}
+
+.empty-upload-area:hover, .empty-upload-area.dragging {
+  border-color: #00d2ff;
+  background: rgba(0, 210, 255, 0.02);
+}
+
+/* Section 2: Quick Stats */
+.quick-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Section 3: Main Analysis Grid */
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.radial-gauges-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.charts-split-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* ApexCharts Overrides for Light Mode */
+.apexcharts-tooltip {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  color: #1e293b !important;
+}
+
+.apexcharts-tooltip-title {
+  background: rgba(0, 0, 0, 0.02) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.apexcharts-text tspan {
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.apexcharts-toolbar {
+  z-index: 10 !important;
+}
+
+@media (max-width: 1024px) {
+  .quick-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .charts-split-row {
+    grid-template-columns: 1fr;
+  }
+  .radial-gauges-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .quick-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

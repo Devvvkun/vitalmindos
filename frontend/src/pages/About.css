@@ -1,0 +1,168 @@
+/* M1: About Page Mesh Background */
+#m1 {
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+  background: radial-gradient(circle at top left, rgba(46, 204, 113, 0.05), transparent 40%),
+              radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.05), transparent 40%);
+  animation: fadeIn 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Glassmorphism utility for all About cards */
+.glass-about-card {
+  background: rgba(255, 255, 255, 0.1); /* 10% transparent white */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .glass-about-card {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+/* Section 1: The Identity */
+#c1 {
+  text-align: center;
+}
+
+#c1 h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+#c1 p {
+  font-size: 1.2rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+  margin-top: 0;
+}
+
+/* Section 2: How AI Works */
+#c2 h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.ai-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .ai-card {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.ai-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(46, 204, 113, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--accent-primary);
+  transition: all 0.3s ease;
+}
+
+/* Neon Shadows on Hover */
+.ai-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.3);
+}
+
+.ai-card:hover .ai-icon-wrapper {
+  background: var(--accent-primary);
+  color: white;
+  box-shadow: 0 0 15px #2ecc71;
+}
+
+.ai-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.ai-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Section 3: Tech Stack */
+#c3 {
+  text-align: center;
+}
+
+#c3 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  color: var(--text-primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .tech-badge {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.tech-badge:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.2);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .ai-grid {
+    grid-template-columns: 1fr;
+  }
+}

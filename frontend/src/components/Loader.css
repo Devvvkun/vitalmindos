@@ -1,0 +1,87 @@
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* EKG Pulse SVG Container */
+.pulse-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation: fadeOutPulse 0.5s ease-in forwards 1.2s; /* Fades out before V zoom */
+}
+
+.pulse-svg {
+  width: 60%;
+  max-width: 600px;
+  overflow: visible;
+}
+
+.pulse-line {
+  fill: none;
+  stroke: #2ecc71; /* Neon green */
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawPulse 1.2s ease-in-out forwards;
+  filter: drop-shadow(0 0 8px rgba(46, 204, 113, 0.8));
+}
+
+@keyframes drawPulse {
+  0% { stroke-dashoffset: 1000; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes fadeOutPulse {
+  0% { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}
+
+/* The V Logo */
+.v-logo {
+  position: absolute;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #2ecc71;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: zoomAndFlash 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards 1s;
+  text-shadow: 0 0 20px rgba(46, 204, 113, 0.5);
+}
+
+@keyframes zoomAndFlash {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(3);
+    filter: brightness(1.5) drop-shadow(0 0 50px #2ecc71);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(20); /* Zooms past the camera */
+    filter: brightness(3) drop-shadow(0 0 200px #ffffff);
+  }
+}
