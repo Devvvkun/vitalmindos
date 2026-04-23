@@ -11,7 +11,7 @@ import sqlite3
 from predict import predict_stress
 from ml_model import train_model
 
-DB_PATH = r"C:\Users\Ujjwal\OneDrive\Desktop\asd\database\database\health.db"
+DB_PATH = r"health.db"
 
 app = Flask(__name__)
 CORS(app)  # Allow requests from Vite dev server (localhost:5173)
