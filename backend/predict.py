@@ -3,12 +3,10 @@ import numpy as np
 import os
 
 # ─── UPDATED PATHS to match project structure ───────────────────────────────
-MODEL_PATH = os.path.join(os.path.dirname(__file__), "..", "frontend", "dist", "models", "stress_model.pkl")
-SCALER_PATH = os.path.join(os.path.dirname(__file__), "..", "frontend", "dist", "models", "scaler.pkl")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-MODEL_PATH = os.path.abspath(MODEL_PATH)
-SCALER_PATH = os.path.abspath(SCALER_PATH)
-
+MODEL_PATH = os.path.join(BASE_DIR, "models", "stress_model.pkl")
+SCALER_PATH = os.path.join(BASE_DIR, "models", "scaler.pkl")
 # ─── LOAD MODEL + SCALER ────────────────────────────────────────────────────
 try:
     model = joblib.load(MODEL_PATH)
